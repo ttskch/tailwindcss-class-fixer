@@ -7,11 +7,12 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "ignore": []
+    "ignore": ["dist"]
   },
   "formatter": {
     "enabled": true,
-    "indentStyle": "tab"
+    "indentStyle": "space",
+    "indentWidth": 2
   },
   "organizeImports": {
     "enabled": true
@@ -19,7 +20,10 @@
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true
+      "recommended": true,
+      "correctness": {
+        "noUnusedImports": "error"
+      }
     }
   },
   "javascript": {

@@ -2,12 +2,7 @@
   "name": "@ttskch/tailwindcss-class-fixer",
   "version": "0.0.0",
   "description": "A CLI tool to sort TailwindCSS class names in any HTML-like language.",
-  "keywords": [
-    "tailwindcss",
-    "formatter",
-    "html",
-    "twig"
-  ],
+  "keywords": ["tailwindcss", "formatter", "html", "twig"],
   "type": "module",
   "main": "build/src/main.js",
   "engines": {
@@ -29,9 +24,12 @@
   "scripts": {
     "start": "node build/src/main.js",
     "clean": "rimraf coverage build tmp",
+    "prebuild": "biome lint",
     "build": "tsc -p tsconfig.json",
     "build:watch": "tsc -w -p tsconfig.json",
     "build:release": "npm run clean && tsc -p tsconfig.release.json",
+    "check": "biome check",
+    "check:fix": "biome check --write",
     "test": "vitest run unit",
     "test:coverage": "vitest run unit --coverage.enabled --coverage.all",
     "test:watch": "vitest unit"

@@ -11,5 +11,6 @@ jobs:
       - uses: volta-cli/action@v4
       - uses: pnpm/action-setup@v4
       - run: pnpm install
+      - run: pnpm biome ci
       - run: pnpm test
       - run: pnpm build
